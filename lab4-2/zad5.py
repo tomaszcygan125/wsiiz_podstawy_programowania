@@ -1,26 +1,22 @@
+
 def bmi(waga, wzrost):
-    if wzrost != 0:
-        wynik = waga / (wzrost*wzrost)
-        if wynik < 18.6:
-            print('niedowaga')
-        elif wynik >= 18.5 and wynik <= 24.9:
-            print('ok')
-        elif wynik >= 30:
-             print('nadwaaga', end=' ')
-             if wynik >=30 and wynik <= 34.9:
-                 print('I stopien')
-             elif wynik >=35 and wynik <=39.9:
-                 print('II stopien')
-             elif wynik >= 40:
-                 print( 'III stopien: ')
-    else:
-        print("nie dziel przez zero")
+    wynik = waga / (wzrost * wzrost)
+
+    if wynik <= 18.5:
+        print('niedowaga')
+    elif wynik > 18.5 and wynik <= 24.9:
+        print('w normie')
+    elif wynik > 24.9 and wynik <= 29.9:
+        print('nadwaga')
+    elif wynik > 29.9 and wynik <= 34.9:
+        print('otylosc I stopien')
+    elif wynik > 34.9 and wynik <= 39.9:
+        print('otylosc II stopien')
+    elif wynik > 39.9:
+        print('otylosc III stopien')
 
 
-waga = 30
 
-wzrost = 1.5
-
+waga = float(input("podaj swoja wage: "))
+wzrost = float(input("podaj swoj wzrost: "))
 bmi(waga, wzrost)
-
-
